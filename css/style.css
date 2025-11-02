@@ -1,0 +1,676 @@
+/* CSS Style  */
+
+:root {
+  --bg: #0a0a0f;
+  --fg: #ffffff;
+  --pink: #ffd6e7;
+  --heart: #ff2b4f;
+  --shadow: rgba(255, 43, 79, 0.6);
+  --textGlow: 0 0 0.6rem rgba(255, 214, 231, 0.9);
+  --maxWidth: 1200px;
+  --messageBoxBg: rgba(139, 69, 119, 0.6); /* Dark translucent pink */
+  --glow: rgba(255, 43, 79, 0.8);
+  --confetti-colors: #ff2b4f, #ffd6e7, #ff5f7a, #c91534;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Sour Gummy", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  color: var(--fg);
+  background: linear-gradient(
+    to bottom,
+    #000000,
+    #2a3a6b
+  ); /* Softer night gradient */
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.scene {
+  position: relative;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.scene[data-bg="stars"] {
+  background: linear-gradient(
+    to bottom,
+    #000000,
+    #2a3a6b
+  ); /* Softer night sky */
+}
+.scene[data-bg="stars"]::before,
+.scene[data-bg="stars"]::after {
+  content: "";
+  position: absolute;
+  inset: -50% -50%;
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: -1;
+  will-change: opacity;
+}
+.scene[data-bg="stars"]::before {
+  background-image: radial-gradient(
+      3px 3px at 15px 25px,
+      #fff 50%,
+      transparent 51%
+    ),
+    radial-gradient(2px 2px at 45px 75px, #fff 50%, transparent 51%),
+    radial-gradient(4px 4px at 85px 45px, #fff 50%, transparent 51%),
+    radial-gradient(3px 3px at 125px 15px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 165px 95px, #fff 50%, transparent 51%),
+    radial-gradient(3px 3px at 205px 35px, #fff 50%, transparent 51%),
+    radial-gradient(4px 4px at 245px 65px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 285px 25px, #fff 50%, transparent 51%),
+    radial-gradient(3px 3px at 325px 85px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 365px 55px, #fff 50%, transparent 51%),
+    radial-gradient(4px 4px at 405px 15px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 445px 75px, #fff 50%, transparent 51%),
+    radial-gradient(3px 3px at 20px 120px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 100px 180px, #fff 50%, transparent 51%),
+    radial-gradient(4px 4px at 180px 140px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 260px 200px, #fff 50%, transparent 51%),
+    radial-gradient(3px 3px at 340px 160px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 420px 220px, #fff 50%, transparent 51%),
+    radial-gradient(4px 4px at 60px 300px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 140px 280px, #fff 50%, transparent 51%),
+    radial-gradient(3px 3px at 480px 350px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 30px 250px, #fff 50%, transparent 51%),
+    radial-gradient(4px 4px at 190px 320px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 380px 80px, #fff 50%, transparent 51%),
+    radial-gradient(3px 3px at 120px 300px, #fff 50%, transparent 51%),
+    radial-gradient(4px 4px at 300px 50px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 50px 180px, #fff 50%, transparent 51%),
+    radial-gradient(3px 3px at 250px 150px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 400px 280px, #fff 50%, transparent 51%);
+  background-size: 500px 400px;
+  animation: twinkleA 4s ease-in-out infinite;
+  opacity: 1;
+}
+.scene[data-bg="stars"]::after {
+  background-image: radial-gradient(
+      2px 2px at 30px 40px,
+      #fff 50%,
+      transparent 51%
+    ),
+    radial-gradient(1px 1px at 70px 90px, #fff 50%, transparent 51%),
+    radial-gradient(3px 3px at 110px 20px, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 150px 130px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 190px 70px, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 230px 110px, #fff 50%, transparent 51%),
+    radial-gradient(3px 3px at 270px 50px, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 310px 150px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 350px 30px, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 390px 100px, #fff 50%, transparent 51%),
+    radial-gradient(3px 3px at 430px 170px, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 470px 60px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 80px 190px, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 120px 240px, #fff 50%, transparent 51%),
+    radial-gradient(3px 3px at 160px 210px, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 200px 280px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 240px 220px, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 280px 290px, #fff 50%, transparent 51%),
+    radial-gradient(3px 3px at 320px 260px, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 360px 300px, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 50px 350px, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 220px 30px, #fff 50%, transparent 51%),
+    radial-gradient(3px 3px at 300px 90px, #fff 50%, transparent 51%);
+  background-size: 500px 350px;
+  animation: twinkleB 6s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+/* Additional star layer for depth */
+.scene[data-bg="stars"] .extra-stars {
+  content: "";
+  position: absolute;
+  inset: -50% -50%;
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: -2;
+  will-change: opacity;
+  background-image: radial-gradient(
+      1px 1px at 10px 50px,
+      #ddd 50%,
+      transparent 51%
+    ),
+    radial-gradient(1px 1px at 50px 100px, #ddd 50%, transparent 51%),
+    radial-gradient(2px 2px at 90px 30px, #ddd 50%, transparent 51%),
+    radial-gradient(1px 1px at 130px 150px, #ddd 50%, transparent 51%),
+    radial-gradient(1px 1px at 170px 80px, #ddd 50%, transparent 51%),
+    radial-gradient(2px 2px at 210px 120px, #ddd 50%, transparent 51%),
+    radial-gradient(1px 1px at 250px 40px, #ddd 50%, transparent 51%),
+    radial-gradient(1px 1px at 290px 160px, #ddd 50%, transparent 51%),
+    radial-gradient(2px 2px at 330px 20px, #ddd 50%, transparent 51%),
+    radial-gradient(1px 1px at 370px 110px, #ddd 50%, transparent 51%),
+    radial-gradient(1px 1px at 410px 180px, #ddd 50%, transparent 51%),
+    radial-gradient(2px 2px at 450px 70px, #ddd 50%, transparent 51%),
+    radial-gradient(1px 1px at 70px 200px, #ddd 50%, transparent 51%),
+    radial-gradient(1px 1px at 110px 250px, #ddd 50%, transparent 51%),
+    radial-gradient(2px 2px at 150px 220px, #ddd 50%, transparent 51%),
+    radial-gradient(1px 1px at 190px 290px, #ddd 50%, transparent 51%),
+    radial-gradient(1px 1px at 230px 230px, #ddd 50%, transparent 51%),
+    radial-gradient(2px 2px at 270px 300px, #ddd 50%, transparent 51%),
+    radial-gradient(1px 1px at 310px 270px, #ddd 50%, transparent 51%),
+    radial-gradient(1px 1px at 350px 310px, #ddd 50%, transparent 51%),
+    radial-gradient(2px 2px at 40px 360px, #ddd 50%, transparent 51%),
+    radial-gradient(1px 1px at 210px 40px, #ddd 50%, transparent 51%),
+    radial-gradient(1px 1px at 290px 100px, #ddd 50%, transparent 51%);
+  background-size: 500px 380px;
+  animation: twinkleC 8s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+@keyframes twinkleA {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes twinkleB {
+  0% {
+    opacity: 0.8;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes twinkleC {
+  0% {
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Floating hearts background */
+.floating-hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.heart-float {
+  position: absolute;
+  color: var(--pink);
+  font-size: var(--size, 20px);
+  opacity: 0.25;
+  animation: floatUp var(--duration, 15s) linear infinite;
+  left: var(--left);
+  animation-delay: var(--delay);
+  will-change: transform, opacity;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(120vh) rotate(var(--rot, 0deg)) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.25;
+  }
+  90% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateY(-20vh) rotate(var(--rot, 0deg)) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.heart-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Mobile tweak: move heart up */
+  transform: translateY(-40px);
+  z-index: 5;
+}
+
+/* On taller screens, reset position */
+@media (min-height: 800px) {
+  .heart-container {
+    transform: translateY(0);
+  }
+}
+
+.heart-btn {
+  display: grid;
+  place-items: center;
+  width: clamp(280px, 40vmin, 520px);
+  height: clamp(280px, 40vmin, 520px);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  filter: drop-shadow(0 0 40px rgba(255, 43, 79, 0.55)) brightness(1.1);
+  transition: transform 0.1s ease, filter 0.3s ease;
+  z-index: 2;
+}
+.heart-btn:hover {
+  filter: drop-shadow(0 0 50px rgba(255, 43, 79, 0.7)) brightness(1.2);
+}
+.heart-btn:active {
+  transform: scale(0.95);
+}
+
+.heart {
+  width: 85%;
+  height: 85%;
+  display: block;
+  transform-origin: center center;
+  will-change: transform, filter;
+}
+.heart svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+.heart svg .core {
+  fill: url(#g);
+  filter: drop-shadow(0 0 20px var(--shadow))
+    drop-shadow(0 0 40px rgba(255, 43, 79, 0.4))
+    drop-shadow(0 0 60px rgba(255, 43, 79, 0.2));
+  animation: gentleBeat 2.5s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+.heart svg .shine {
+  fill: rgba(255, 255, 255, 0.45);
+  mix-blend-mode: screen;
+  animation: shinePulse 3s ease-in-out infinite;
+}
+
+@keyframes shinePulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes gentleBeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.heart-btn.clicked .heart svg .core {
+  animation: strongBeat 0.7s cubic-bezier(0.17, 0.67, 0.83, 0.67),
+    gentleBeat 2.5s ease-in-out infinite 0.7s;
+}
+
+@keyframes strongBeat {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.8);
+  }
+  30% {
+    transform: scale(0.6);
+  }
+  45% {
+    transform: scale(1.6);
+  }
+  60% {
+    transform: scale(0.7);
+  }
+  75% {
+    transform: scale(1.3);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.phrase {
+  position: absolute;
+  display: inline-block;
+  padding: 0.8em 1.4em;
+  background: var(--messageBoxBg); /* Dark translucent pink */
+  border-radius: 25px;
+  border: 1px solid rgba(255, 214, 231, 0.3);
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6), var(--textGlow);
+  pointer-events: none;
+  font-size: clamp(14px, 2.2vw, 26px);
+  color: var(--pink);
+  opacity: 0;
+  z-index: 10;
+  box-shadow: 0 8px 32px rgba(255, 43, 79, 0.2), 0 0 20px var(--glow);
+  transform: translate(-50%, -50%);
+  white-space: normal;
+  max-width: 90vw;
+  text-align: center;
+  will-change: transform, opacity, color;
+  transition: color 0.5s ease;
+}
+
+.phrase.shooting {
+  animation: shootAndFall var(--duration, 6s)
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes shootAndFall {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5) rotate(var(--rotation, 0deg));
+  }
+  10% {
+    opacity: 1;
+    transform: translate(
+        calc(-50% + var(--shoot-x)),
+        calc(-50% + var(--shoot-y))
+      )
+      scale(1.1) rotate(var(--rotation, 0deg));
+  }
+  15% {
+    transform: translate(
+        calc(-50% + var(--shoot-x)),
+        calc(-50% + var(--shoot-y))
+      )
+      scale(1) rotate(var(--rotation, 0deg));
+  }
+  90% {
+    opacity: 1;
+    transform: translate(
+        calc(-50% + var(--final-x)),
+        calc(-50% + var(--final-y))
+      )
+      scale(0.85) rotate(var(--final-rotation, 0deg));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(
+        calc(-50% + var(--final-x)),
+        calc(-50% + var(--final-y))
+      )
+      scale(0.7) rotate(var(--final-rotation, 0deg));
+  }
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--heart);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  will-change: transform, opacity;
+  box-shadow: 0 0 10px var(--glow);
+}
+
+.particle.burst {
+  animation: particleBurst 1.2s ease-out forwards;
+}
+
+@keyframes particleBurst {
+  0% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0)
+      translate(var(--particle-x, 0px), var(--particle-y, 0px));
+  }
+}
+
+/* Confetti effects */
+.confetti {
+  position: absolute;
+  width: var(--size, 6px);
+  height: var(--size, 6px);
+  background: var(--color, #ff2b4f);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: confettiBurst var(--duration, 1.5s) ease-out forwards;
+}
+
+@keyframes confettiBurst {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--conf-x, 0px), var(--conf-y, 0px)) scale(0.5)
+      rotate(var(--rot, 0deg));
+  }
+}
+
+/* Music player */
+.music-player {
+  position: fixed;
+  top: 20px; /* At the top */
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--messageBoxBg);
+  padding: 10px 18px; /* Reduced vertical padding */
+  border-radius: 20px;
+  border: 1px solid rgba(255, 214, 231, 0.3);
+  box-shadow: 0 8px 32px rgba(255, 43, 79, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Reduced gap */
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  min-width: 260px; /* Reduced min width */
+  opacity: 0;
+  transform: translateX(-50%) translateY(-100%); /* Slide-in from top */
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.music-player.active {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.play-pause-btn {
+  background: rgba(255, 43, 79, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 36px; /* Slightly smaller */
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 43, 79, 0.3);
+}
+
+.play-pause-btn:hover {
+  background: rgba(255, 43, 79, 1);
+  transform: scale(1.05);
+}
+
+.play-pause-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.progress-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Reduced gap */
+}
+
+.song-info {
+  font-size: 13px; /* Slightly smaller */
+  color: var(--pink);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 3px; /* Slightly smaller */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff2b4f, #ff5f7a);
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px; /* Slightly smaller */
+  color: rgba(255, 214, 231, 0.8);
+  font-weight: 400;
+}
+
+/* Press counter */
+.counter {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--messageBoxBg);
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 214, 231, 0.3);
+  box-shadow: 0 8px 32px rgba(255, 43, 79, 0.2);
+  font-size: 14px;
+  color: var(--pink);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  opacity: 0.9;
+}
+
+/* Media queries for better responsiveness */
+@media (max-width: 600px) {
+  .phrase {
+    font-size: clamp(12px, 3.5vw, 20px);
+    padding: 0.6em 1.2em;
+  }
+
+  .music-player {
+    width: 90%;
+    min-width: unset;
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .song-info {
+    font-size: 12px;
+  }
+
+  .time-display {
+    font-size: 10px;
+  }
+
+  .play-pause-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .counter {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .heart-container {
+    transform: translateY(-20px); /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .heart-btn {
+    width: clamp(200px, 80vw, 280px);
+    height: clamp(200px, 80vw, 280px);
+  }
+
+  .phrase {
+    font-size: clamp(10px, 4vw, 16px);
+  }
+}

@@ -231,8 +231,8 @@ If you plan to add major new features (external sensors, advanced audio routing)
 
 ### Contact and Maintainer
 
+- **\_Project:** _heartpress_
 - **_Name:_** Md Abu Kayser - Full-Stack Engineer
-- **\_Project:** _HeartPress-Interactive-Love-Experience_
 - **_Maintainer:_** [md-abu-kayser](https://github.com/md-abu-kayser)
 - **_GitHub:_** [github.com/abu.kayser-official](https://github.com/md-abu-kayser)
 - **_Email:_** [abu.kayser.official@gmail.com](mailto:abu.kayser.official@gmail.com)

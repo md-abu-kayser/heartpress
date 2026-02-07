@@ -1,4 +1,4 @@
-# HeartPress - Interactive Love Experience
+# HeartPress - Interactive Love Experience (1000+ Romantic Messages Vanilla JS Offline-capable)
 
 ## Your Ultimate Romance Expression Platform
 
@@ -50,7 +50,6 @@ A sophisticated, interactive web platform featuring an extensive collection of 1
 **Our extensive collection of 1000+ messages is organized into intuitive categories:**
 
 1. **Relationship Stages**
-
    - First Love and Crush (100+ messages)
    - Dating and Romance (200+ messages)
    - Long-term Relationship (150+ messages)
@@ -58,7 +57,6 @@ A sophisticated, interactive web platform featuring an extensive collection of 1
    - Long Distance Love (100+ messages)
 
 2. **Daily Romance**
-
    - Good Morning Love (100+ messages)
    - Good Night Dreams (100+ messages)
    - Missing You Moments (50+ messages)
@@ -66,7 +64,6 @@ A sophisticated, interactive web platform featuring an extensive collection of 1
    - Romantic Quotes (50+ messages)
 
 3. **Special Occasions**
-
    - Birthday Wishes (50+ messages)
    - Anniversary Celebrations (50+ messages)
    - Valentine's Day Special (50+ messages)
@@ -108,21 +105,18 @@ https://md-abu-kayser.github.io/HeartPress-Interactive-Love-Experience/
 ### Why Clients Love HeartPress
 
 1. **Massive Content Library**
-
    - 1000+ professionally written messages
    - Regular content updates
    - Multi-language support
    - Category-based organization
 
 2. **Technical Excellence**
-
    - Clean, modern codebase
    - Fast loading (< 2s initial load)
    - Offline support
    - Cross-platform compatibility
 
 3. **Business Ready**
-
    - Easy white-labeling
    - API integration ready
    - Analytics support
@@ -169,12 +163,10 @@ heartPress.on("messageSelect", (message) => {
 ### Customization guide
 
 1. **Visuals**
-
    - Modify colors and layout in `css/style.css`.
    - Replace heart SVG or CSS animation to match branding.
 
 2. **Audio**
-
    - Add or swap audio files in `audio/` and update references inside `js/script.js`.
    - Use shorter stems for looping ambient layers and longer tracks for narrative pieces.
 
@@ -193,7 +185,6 @@ heartPress.on("messageSelect", (message) => {
 This is a static project - deploy anywhere that serves static files. Two recommended options:
 
 1. **GitHub Pages**
-
    - In repository settings, enable GitHub Pages from the `main` branch (or `gh-pages` branch).
    - Push and wait a few minutes for the site to become available.
 

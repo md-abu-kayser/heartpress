@@ -2,7 +2,7 @@
 
 ## Your Ultimate Romance Expression Platform
 
-> 1000+ Romantic Messages | Interactive Experience | Multi-Platform Support
+> 1000+ Romantic Messages - Interactive Experience - Multi-Platform Support
 
 A sophisticated, interactive web platform featuring an extensive collection of 1000+ romantic messages and an immersive love experience. HeartPress combines visual aesthetics, responsive interactions, and a curated library of romantic content, making it the perfect solution for digital love expression, relationship enhancement, and emotional connection.
 
@@ -81,15 +81,15 @@ A sophisticated, interactive web platform featuring an extensive collection of 1
 
 1. **git repo clone:**
 
-```
-git clone https://github.com/md-abu-kayser/HeartPress-Interactive-Love-Experience.git
+```bash
+git clone https://github.com/md-abu-kayser/heartpress.git
 
 ```
 
 2. **github live page:**
 
-```
-https://md-abu-kayser.github.io/HeartPress-Interactive-Love-Experience/
+```bash
+https://md-abu-kayser.github.io/heartpress/
 
 ```
 
@@ -153,7 +153,7 @@ heartPress.on("messageSelect", (message) => {
 });
 ```
 
-## Contract----> small
+## Contract - small
 
 - **Input:** user pointer/touch interactions, optional external sensors (via Web MIDI/WebSocket) if integrated.
 - **Output:** animated heart visual, audio playback and dynamic UI cues.
@@ -182,7 +182,7 @@ heartPress.on("messageSelect", (message) => {
 
 ## Deployment
 
-This is a static project - deploy anywhere that serves static files. Two recommended options:
+**This is a static project - deploy anywhere that serves static files. Two recommended options:**
 
 1. **GitHub Pages**
    - In repository settings, enable GitHub Pages from the `main` branch (or `gh-pages` branch).

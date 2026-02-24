@@ -1,5 +1,19 @@
 # HeartPress - Interactive Love Experience (1000+ Romantic Messages Vanilla JS Offline-capable)
 
+<!-- MIT License -->
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+
+<!-- HTML & CSS -->
+
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5\&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3\&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+<!-- Fonts & Icons -->
+
+[![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?logo=google\&logoColor=white)](https://fonts.google.com/)
+[![Heroicons](https://img.shields.io/badge/Heroicons-0EA5E9?logo=heroicons\&logoColor=white)](https://heroicons.com/)
+
 <!-- Languages & Web Standards -->
 
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript\&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
